@@ -1,0 +1,115 @@
+*{margin: 0;padding: 0;}
+body{background-color: black;}
+section{
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    margin: 30px auto;
+    position: relative;
+}
+div.inner{
+    float: left;
+    width: 260px;
+    height: 50px;
+    /* background-color: red; */
+    margin: 40px 20px;
+    position: relative;
+    transform-origin: center center;
+    opacity: 0;
+    /* animation: first 2s linear 1s 1 forwards;  */
+    animation: rota 3s ease-in-out 7s 1 ;
+    transition: 1s ease;
+}
+
+div.mz{
+    position: absolute;
+    font-size: 24px;
+    top:5px;
+    left: 10px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 5px;
+    text-shadow: 4px 2px 1px black;
+    transform: rotate(-2deg);
+    opacity: 0;
+    animation: distxt 2s linear 3s forwards;
+}
+div.wrap{
+    width: 300px;
+    height: 370px;
+    /* background-color: red; */
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+img{
+    position: absolute;
+    display: block;
+    width: 280px;
+    height: 200px;
+    top: 15px;
+    left: 10px;
+    opacity: 0;
+    animation: first 1s linear 4s 1 forwards;
+}
+div.mz1,div.mz2{
+    position: absolute;
+    top: 93px;
+    left: 100px;
+    width: 90px;
+    height: 20px;
+    background:linear-gradient(transparent 60%,transparent 60%,rgb(150, 147, 123) 100%,rgb(153, 150, 131)  100% );
+    text-align: center;
+    opacity: 0;
+    animation: tet_1 1s linear 5s 1 forwards;
+}
+div.mz2{
+    left: 100px;
+    top:123px;
+}
+div.cover{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    position: absolute;
+    top:200px;
+    left:-150px;
+    transform-origin: right 0;
+    animation: sec 1s linear 2s 1 forwards;
+}
+@keyframes first{
+    from{}
+    to{opacity: 1;}
+}
+@keyframes sec{
+    from{}
+    to{transform: rotate(-90deg);}
+}
+
+@keyframes rota{
+    0%{}
+    20%{transform:scale(1.2,1.2) rotate(-10deg)}
+    40%{transform:scale(1.2,1.2) rotate(10deg)}
+    60%{transform:scale(1.2,1.2) rotate(-10deg)}
+    80%{transform:scale(1.2,1.2) rotate(10deg)}
+    100%{}
+}
+@keyframes distxt{
+    0%{}
+    25%{
+        opacity: 1;
+        transform: scale(1.2,1.2) rotate(-10deg);
+    }
+    50%{opacity: 1;
+        transform: scale(1.2,1.2) rotate(10deg);}
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes tet_1{
+    from{}
+    to{
+        opacity: 1;
+        transform: translate(0,-3px)
+    }
+}
